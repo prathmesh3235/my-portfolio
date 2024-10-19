@@ -5,6 +5,8 @@ import ProjectCard from '../components/ProjectCard';
 import SocialLinks from '../components/SocialLinks';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ProjectsSection from './ProjectsSection';
+import WorkExperience from './WorkExperience';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -17,12 +19,6 @@ const HeroSection = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const projects = [
-    { name: 'E-commerce Platform', description: 'A full-stack online store with React and Node.js' },
-    { name: 'Task Management App', description: 'A productivity app built with Next.js and GraphQL' },
-    { name: 'Data Visualization Dashboard', description: 'Interactive charts using D3.js and React' },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
       <Navbar />
@@ -33,8 +29,8 @@ const HeroSection = () => {
         }}
         transition={{ type: 'tween', ease: 'linear', duration: 0.2 }}
       />
-      <div className="container mx-auto px-4 py-20">
-        <header className="text-center mb-20">
+      <div className="container mx-auto px-2 py-20">
+        <header className="text-center mb-2">
           <motion.h1 
             className="text-6xl md:text-8xl font-bold mb-4"
             initial={{ opacity: 0, y: -50 }}
@@ -52,14 +48,14 @@ const HeroSection = () => {
             Full Stack Developer
           </motion.p>
         </header>
+        <section id= "technical-skills">
         <SkillsShowcase />
-        <section id="projects" className="mb-20">
-          <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} title={project.name} description={project.description} />
-            ))}
-          </div>
+        </section>
+        <section id ="work-experience">
+        <WorkExperience/>
+        </section>
+        <section id="projects">
+        <ProjectsSection/>
         </section>
         <SocialLinks />
       </div>

@@ -19,19 +19,19 @@ const skillData = [
         name: "Next.js",
         level: 85,
         logo: "/logos/nextdotjs.svg",
-        color: "bg-black"
+        color: "bg-blue-500"
       },
       {
         name: "TypeScript",
         level: 85,
         logo: "/logos/typescript.svg",
-        color: "bg-blue-600"
+        color: "bg-blue-500"
       },
       {
         name: "Tailwind CSS",
         level: 90,
         logo: "/logos/tailwindcss.svg",
-        color: "bg-teal-500"
+        color: "bg-blue-500"
       }
     ]
   },
@@ -45,19 +45,19 @@ const skillData = [
         name: "Node.js",
         level: 85,
         logo: "/logos/nodejs.svg",
-        color: "bg-green-600"
+        color: "bg-green-500"
       },
       {
         name: "Express",
         level: 80,
         logo: "/logos/express.svg",
-        color: "bg-gray-800"
+        color: "bg-green-500"
       },
       {
         name: "Python",
         level: 75,
         logo: "/logos/python.svg",
-        color: "bg-yellow-500"
+        color: "bg-green-500"
       }
     ]
   },
@@ -71,13 +71,13 @@ const skillData = [
         name: "MongoDB",
         level: 80,
         logo: "/logos/mongodb.svg",
-        color: "bg-green-500"
+        color: "bg-purple-500"
       },
       {
         name: "Firebase",
         level: 85,
         logo: "/logos/firebase.svg",
-        color: "bg-yellow-500"
+        color: "bg-purple-500"
       }
     ]
   },
@@ -91,19 +91,19 @@ const skillData = [
         name: "Docker",
         level: 75,
         logo: "/logos/docker.svg",
-        color: "bg-blue-500"
+        color: "bg-red-500"
       },
       {
         name: "Git",
         level: 90,
         logo: "/logos/git.svg",
-        color: "bg-orange-500"
+        color: "bg-red-500"
       },
       {
         name: "Kubernetes",
         level: 65,
         logo: "/logos/kubernetes.svg",
-        color: "bg-blue-600"
+        color: "bg-red-500"
       }
     ]
   }
@@ -295,7 +295,7 @@ const SkillsShowcase = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {skillData.map((category, index) => (
             <SkillSection 
               key={category.title} 
