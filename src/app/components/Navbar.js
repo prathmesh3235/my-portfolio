@@ -7,29 +7,16 @@ export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">Prathmesh Doddanawar</div>
-        <div className="hidden md:flex space-x-4">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-        <div className="md:hidden">
-          <button onClick={() => setNavOpen(!navOpen)}>
-            {navOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-      {navOpen && (
-        <div className="md:hidden flex flex-col space-y-2 mt-2">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-      )}
-    </nav>
+    <nav className="fixed top-0 left-0 w-full p-6 z-50 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-lg">
+    <ul className="flex justify-end space-x-8">
+      {['About', 'Projects', 'Contact'].map((item) => (
+        <li key={item}>
+          <a href={`#${item.toLowerCase()}`} className="text-lg hover:text-purple-400 transition-colors">
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
   );
 }

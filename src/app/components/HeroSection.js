@@ -1,21 +1,71 @@
-"use client";
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import SkillsShowcase from './SkillsShowcase';
+import ProjectCard from '../components/ProjectCard';
+import SocialLinks from '../components/SocialLinks';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-export default function HeroSection() {
+const HeroSection = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  const projects = [
+    { name: 'E-commerce Platform', description: 'A full-stack online store with React and Node.js' },
+    { name: 'Task Management App', description: 'A productivity app built with Next.js and GraphQL' },
+    { name: 'Data Visualization Dashboard', description: 'Interactive charts using D3.js and React' },
+  ];
+
   return (
-    <section className="hero min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center text-white"
-      >
-        <h1 className="text-5xl font-bold">Prathmesh Doddanawar</h1>
-        <p className="mt-4 text-xl">Full Stack Developer</p>
-        <button className="mt-8 px-6 py-3 bg-white text-blue-500 rounded-full shadow-lg hover:bg-gray-200">
-          View My Work
-        </button>
-      </motion.div>
-    </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+      <Navbar />
+      <motion.div 
+        className="absolute inset-0 pointer-events-none"
+        animate={{
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(124, 58, 237, 0.2) 0%, rgba(31, 41, 55, 0) 50%)`,
+        }}
+        transition={{ type: 'tween', ease: 'linear', duration: 0.2 }}
+      />
+      <div className="container mx-auto px-4 py-20">
+        <header className="text-center mb-20">
+          <motion.h1 
+            className="text-6xl md:text-8xl font-bold mb-4"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Prathmesh Doddanawar
+          </motion.h1>
+          <motion.p 
+            className="text-2xl md:text-3xl text-purple-400"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Full Stack Developer
+          </motion.p>
+        </header>
+        <SkillsShowcase />
+        <section id="projects" className="mb-20">
+          <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} title={project.name} description={project.description} />
+            ))}
+          </div>
+        </section>
+        <SocialLinks />
+      </div>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default HeroSection;
