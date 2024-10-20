@@ -5,109 +5,113 @@ import { useInView } from 'react-intersection-observer';
 const skillData = [
   {
     title: "Frontend Development",
-    titleColor: "text-blue-600",
-    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
-    borderColor: "border-blue-100",
+    titleColor: "text-white",
+    bgGradient: "bg-gradient-to-br from-purple-900/10 to-blue-900/10",
+    borderColor: "border-purple-900/20",
     skills: [
       {
         name: "React",
         level: 90,
         logo: "/logos/react.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Next.js",
         level: 85,
         logo: "/logos/nextdotjs.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "TypeScript",
         level: 85,
         logo: "/logos/typescript.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Tailwind CSS",
         level: 90,
         logo: "/logos/tailwindcss.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
   },
+
   {
     title: "Backend Development",
-    titleColor: "text-blue-600",
-    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
-    borderColor: "border-blue-100",
+    titleColor:  "text-white",
+    bgGradient: "bg-gradient-to-br from-purple-900/10 to-blue-900/10",
+    borderColor: "border-purple-900/20",
     skills: [
       {
         name: "Node.js",
         level: 85,
         logo: "/logos/nodejs.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Express",
         level: 80,
         logo: "/logos/express.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Python",
         level: 75,
         logo: "/logos/python.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
   },
+
   {
     title: "Database & Cloud",
-    titleColor: "text-blue-600",
-    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
-    borderColor: "border-blue-100",
+    titleColor:  "text-white",
+    bgGradient: "bg-gradient-to-br from-purple-900/10 to-blue-900/10",
+    borderColor: "border-purple-900/20",
     skills: [
       {
         name: "MongoDB",
         level: 80,
         logo: "/logos/mongodb.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Firebase",
         level: 85,
         logo: "/logos/firebase.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
   },
+
   {
     title: "DevOps & Tools",
-    titleColor: "text-blue-600",
-    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
-    borderColor: "border-blue-100",
+    titleColor:  "text-white",
+    bgGradient: "bg-gradient-to-br from-purple-900/10 to-blue-900/10",
+    borderColor: "border-purple-900/20",
     skills: [
       {
         name: "Docker",
         level: 75,
         logo: "/logos/docker.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Git",
         level: 90,
         logo: "/logos/git.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Kubernetes",
         level: 65,
         logo: "/logos/kubernetes.svg",
-        color: "bg-blue-500"
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
   }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

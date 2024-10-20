@@ -20,7 +20,7 @@ const ProfileCard = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-[#0a0a0a]">
       <div 
-        className="relative w-full max-w-4xl mx-auto overflow-hidden"
+        className="relative w-full max-w-6xl mx-auto overflow-hidden"
         onMouseMove={handleMouseMove}
         style={{
           '--x': mousePosition.x,
@@ -93,7 +93,7 @@ const ProfileCard = () => {
           </div>
 
           {/* Bio with code-inspired styling */}
-          <div className="relative max-w-3xl mx-auto">
+          {/* <div className="relative max-w-3xl mx-auto">
             <div className="text-gray-400 font-light leading-relaxed text-center space-y-4">
               <p className="relative overflow-hidden">
                 <span className="inline-block transform hover:translate-x-2 transition-transform duration-300">
@@ -107,7 +107,7 @@ const ProfileCard = () => {
                 </span>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

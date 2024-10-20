@@ -21,7 +21,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden relative">
+    <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden relative">
       <Navbar />
       <motion.div
         className="fixed inset-0 pointer-events-none"
