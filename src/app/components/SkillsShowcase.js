@@ -37,73 +37,73 @@ const skillData = [
   },
   {
     title: "Backend Development",
-    titleColor: "text-green-600",
-    bgGradient: "bg-gradient-to-br from-green-50 to-emerald-50",
-    borderColor: "border-green-100",
+    titleColor: "text-blue-600",
+    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
+    borderColor: "border-blue-100",
     skills: [
       {
         name: "Node.js",
         level: 85,
         logo: "/logos/nodejs.svg",
-        color: "bg-green-500"
+        color: "bg-blue-500"
       },
       {
         name: "Express",
         level: 80,
         logo: "/logos/express.svg",
-        color: "bg-green-500"
+        color: "bg-blue-500"
       },
       {
         name: "Python",
         level: 75,
         logo: "/logos/python.svg",
-        color: "bg-green-500"
+        color: "bg-blue-500"
       }
     ]
   },
   {
     title: "Database & Cloud",
-    titleColor: "text-purple-600",
-    bgGradient: "bg-gradient-to-br from-purple-50 to-fuchsia-50",
-    borderColor: "border-purple-100",
+    titleColor: "text-blue-600",
+    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
+    borderColor: "border-blue-100",
     skills: [
       {
         name: "MongoDB",
         level: 80,
         logo: "/logos/mongodb.svg",
-        color: "bg-purple-500"
+        color: "bg-blue-500"
       },
       {
         name: "Firebase",
         level: 85,
         logo: "/logos/firebase.svg",
-        color: "bg-purple-500"
+        color: "bg-blue-500"
       }
     ]
   },
   {
     title: "DevOps & Tools",
-    titleColor: "text-red-600",
-    bgGradient: "bg-gradient-to-br from-red-50 to-orange-50",
-    borderColor: "border-red-100",
+    titleColor: "text-blue-600",
+    bgGradient: "bg-gradient-to-br from-blue-50 to-indigo-50",
+    borderColor: "border-blue-100",
     skills: [
       {
         name: "Docker",
         level: 75,
         logo: "/logos/docker.svg",
-        color: "bg-red-500"
+        color: "bg-blue-500"
       },
       {
         name: "Git",
         level: 90,
         logo: "/logos/git.svg",
-        color: "bg-red-500"
+        color: "bg-blue-500"
       },
       {
         name: "Kubernetes",
         level: 65,
         logo: "/logos/kubernetes.svg",
-        color: "bg-red-500"
+        color: "bg-blue-500"
       }
     ]
   }
@@ -224,7 +224,7 @@ const SkillSection = ({ category, index }) => {
 
 const FloatingTag = ({ children, index }) => (
   <motion.span
-    className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200"
+    className="px-4 py-2 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200"
     initial={{ opacity: 0, y: 20 }}
     whileHover={{ 
       y: -5,
@@ -255,7 +255,7 @@ const SkillsShowcase = () => {
   }, [controls, inView]);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-4">
+    <div className="min-h-screen py-20 px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
         initial="hidden"
@@ -284,14 +284,14 @@ const SkillsShowcase = () => {
             animate={{ width: "6rem" }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
-          <motion.p 
+          {/* <motion.p 
             className="text-gray-600 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             A comprehensive overview of my technical stack and proficiency levels
-          </motion.p>
+          </motion.p> */}
         </motion.div>
 
         {/* Skills Grid */}

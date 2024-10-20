@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SkillsShowcase from './SkillsShowcase';
 import ProjectCard from '../components/ProjectCard';
-import SocialLinks from '../components/SocialLinks';
+import ContactSection from './ContactSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectsSection from './ProjectsSection';
 import WorkExperience from './WorkExperience';
+import ProfileCard from './ProfileCard';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -20,44 +21,32 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden relative">
       <Navbar />
-      <motion.div 
-        className="absolute inset-0 pointer-events-none"
+      <motion.div
+        className="fixed inset-0 pointer-events-none"
+        style={{ width: '100vw', height: '100vh' }}
         animate={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(124, 58, 237, 0.2) 0%, rgba(31, 41, 55, 0) 50%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(124, 58, 237, 0.2) 0%, rgba(31, 41, 55, 0) 40%)`,
         }}
         transition={{ type: 'tween', ease: 'linear', duration: 0.2 }}
       />
-      <div className="container mx-auto px-2 py-20">
-        <header className="text-center mb-2">
-          <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-4"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Prathmesh Doddanawar
-          </motion.h1>
-          <motion.p 
-            className="text-2xl md:text-3xl text-purple-400"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Full Stack Developer
-          </motion.p>
-        </header>
-        <section id= "technical-skills">
-        <SkillsShowcase />
+      <div className="container mx-auto px-4 py-10">
+        <section id="about" className="section">
+          <ProfileCard />
         </section>
-        <section id ="work-experience">
-        <WorkExperience/>
+        <section id="work-experience" className="section mt-20">
+          <WorkExperience/>
         </section>
-        <section id="projects">
-        <ProjectsSection/>
+        <section id="technical-skills" className="section mt-20">
+          <SkillsShowcase />
         </section>
-        <SocialLinks />
+        <section id="projects" className="section mt-20">
+          <ProjectsSection/>
+        </section>
+        <section id="contact" className="section mt-20">
+          <ContactSection/>
+        </section>
       </div>
       <Footer />
     </div>

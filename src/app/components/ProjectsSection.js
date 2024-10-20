@@ -1,34 +1,57 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Github, ExternalLink, Code2 } from 'lucide-react';
-
 
 const projects = [
   {
-    title: 'Shristerling - Portfolio Website',
+    title: 'Shristerling: E-commerce Website',
     description: 'Modern portfolio website with sleek animations, dynamic content loading, and responsive design. Features interactive UI elements and smooth navigation experience.',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'React'],
     link: 'https://shristerling.vercel.app/',
     github: 'https://github.com/yourusername/shristerling',
     image: '/logos/projectSterling.webp',
-    featured: true
+    // featured: true
   },
   {
-    title: 'Azernis GmbH Landing Page',
+    title: 'Azernis GmbH Website',
     description: 'Professional landing page with modern design principles and optimized performance metrics.',
     tech: ['Next.js', 'Tailwind CSS', 'Docker'],
     link: 'https://azernis.com',
     github: null,
     image: '/logos/projectAzernis.png',
+  },
+  {
+    title: 'Yaml & Dockerfile Generator',
+    description: 'A web-based application to generate YAML files and Dockerfiles, allowing developers to create these configuration files easily through an intuitive interface. Supports customization of various parameters for Docker and Kubernetes deployments.',
+    tech: ['React', 'Node.js', 'Docker'],
+    link: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
+    github: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
+    image: '/logos/dockerfileGenerator.png',
   }
 ];
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index, isInView }) => {
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        delay: index * 0.2
+      }
+    }
+  };
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      variants={cardVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
       className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300
         ${project.featured ? 'md:col-span-2 md:row-span-2' : ''}`}
     >
@@ -80,14 +103,29 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const ProjectsSection = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: 0.2
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-4">
+    <div className="min-h-screen py-20 px-4" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          variants={headerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Featured Projects
@@ -95,8 +133,8 @@ const ProjectsSection = () => {
           <motion.div 
             className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"
             initial={{ width: 0 }}
-            animate={{ width: "6rem" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            animate={isInView ? { width: "6rem" } : { width: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           />
           <p className="text-gray-600 max-w-2xl mx-auto">
             A showcase of my recent work and technical capabilities
@@ -105,7 +143,12 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard 
+              key={index} 
+              project={project} 
+              index={index} 
+              isInView={isInView}
+            />
           ))}
         </div>
       </div>
