@@ -88,7 +88,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
         variants={cardVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="relative pl-8 pb-8 group"
+        className="relative px-5 pb-8 group"
       >
         <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-blue-600 to-purple-600 group-last:h-8"></div>
         
