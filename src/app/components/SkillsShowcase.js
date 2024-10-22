@@ -17,13 +17,19 @@ const skillData = [
       },
       {
         name: "Next.js",
-        level: 85,
+        level: 90,
         logo: "/logos/nextdotjs.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
+        name: "JavaScript",
+        level: 90,
+        logo: "/logos/typescript.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+      {
         name: "TypeScript",
-        level: 85,
+        level: 80,
         logo: "/logos/typescript.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -44,19 +50,19 @@ const skillData = [
     skills: [
       {
         name: "Node.js",
-        level: 85,
+        level: 70,
         logo: "/logos/nodejs.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Express",
-        level: 80,
+        level: 70,
         logo: "/logos/express.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Python",
-        level: 75,
+        level: 70,
         logo: "/logos/python.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
@@ -70,8 +76,8 @@ const skillData = [
     borderColor: "border-purple-900/20",
     skills: [
       {
-        name: "MongoDB",
-        level: 80,
+        name: "MySQL",
+        level: 70,
         logo: "/logos/mongodb.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -92,7 +98,7 @@ const skillData = [
     skills: [
       {
         name: "Docker",
-        level: 75,
+        level: 80,
         logo: "/logos/docker.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -104,7 +110,7 @@ const skillData = [
       },
       {
         name: "Kubernetes",
-        level: 65,
+        level: 50,
         logo: "/logos/kubernetes.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
@@ -259,7 +265,7 @@ const SkillsShowcase = () => {
   }, [controls, inView]);
 
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen py-1 px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
         initial="hidden"
@@ -324,8 +330,8 @@ const SkillsShowcase = () => {
           </motion.h3>
           <div className="flex flex-wrap gap-3">
             {[
-              "Redux", "Webpack", "Jest", "Cypress", "CI/CD", "REST APIs",
-              "Agile", "Scrum", "VS Code", "Figma", "Sass", "JWT"
+              "Redux", "Webpack", "Cypress", "CI/CD", "REST APIs",
+              "Agile", "Scrum", "VS Code", "Figma","Adobe CC", "JWT"
             ].map((tool, index) => (
               <FloatingTag key={tool} index={index}>
                 {tool}

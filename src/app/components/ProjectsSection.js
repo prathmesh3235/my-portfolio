@@ -8,9 +8,8 @@ const projects = [
     description: 'Modern portfolio website with sleek animations, dynamic content loading, and responsive design. Features interactive UI elements and smooth navigation experience.',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'React'],
     link: 'https://shristerling.vercel.app/',
-    github: 'https://github.com/yourusername/shristerling',
+    github: 'https://github.com/prathmesh3235/sterling_next',
     image: '/logos/projectSterling.webp',
-    // featured: true
   },
   {
     title: 'Azernis GmbH Website',
@@ -22,7 +21,7 @@ const projects = [
   },
   {
     title: 'Yaml & Dockerfile Generator',
-    description: 'A web-based application to generate YAML files and Dockerfiles, allowing developers to create these configuration files easily through an intuitive interface. Supports customization of various parameters for Docker and Kubernetes deployments.',
+    description: 'A web-based application to generate YAML files and Dockerfiles, allowing developers to create these configuration files easily through an intuitive interface.',
     tech: ['React', 'Node.js', 'Docker'],
     link: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
     github: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
@@ -47,54 +46,77 @@ const ProjectCard = ({ project, index, isInView }) => {
       }
     }
   };
+
   return (
     <motion.div
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300
+      className={`backdrop-blur-sm bg-black/40 rounded-xl overflow-hidden border border-purple-900/20
+        hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 group
         ${project.featured ? 'md:col-span-2 md:row-span-2' : ''}`}
     >
-      <div className="relative group">
+      <div className="relative overflow-hidden">
         <img 
           src={project.image} 
           alt={project.title}
-          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <div className="flex gap-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-end gap-3">
             {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer"
-                className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
-                <Github className="w-6 h-6" />
-              </a>
+              <motion.a 
+                href={project.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 backdrop-blur-sm bg-white/10 rounded-full hover:bg-white/20 border border-white/10
+                         transition-colors duration-300"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github className="w-5 h-5 text-white" />
+              </motion.a>
             )}
-            <a href={project.link} target="_blank" rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
-              <ExternalLink className="w-6 h-6" />
-            </a>
+            <motion.a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 backdrop-blur-sm bg-white/10 rounded-full hover:bg-white/20 border border-white/10
+                       transition-colors duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ExternalLink className="w-5 h-5 text-white" />
+            </motion.a>
           </div>
         </div>
       </div>
 
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-          <Code2 className="w-5 h-5 text-gray-400" />
+          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+            {project.title}
+          </h3>
+          <Code2 className="w-5 h-5 text-purple-400/60" />
         </div>
         
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-400 mb-4 line-clamp-3">
           {project.description}
         </p>
 
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech, index) => (
-            <span
+            <motion.span
               key={index}
-              className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+              className="px-3 py-1 backdrop-blur-sm bg-purple-500/10 border border-purple-500/20 
+                       text-purple-400 text-sm rounded-full hover:bg-purple-500/20 transition-colors duration-300"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               {tech}
-            </span>
+            </motion.span>
           ))}
         </div>
       </div>
@@ -106,42 +128,50 @@ const ProjectsSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        delay: 0.2
-      }
-    }
-  };
+  // Background pattern elements
+  const PatternElement = () => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.03]">
+      {[...Array(15)].map((_, i) => (
+        <div key={i} className="absolute text-sm text-gray-500 font-mono transform rotate-45" 
+             style={{ 
+               top: `${i * 7}%`, 
+               left: Math.random() * 100 + '%',
+               transform: `rotate(${Math.random() * 360}deg)`
+             }}>
+          {'{  }  </>  ( )  =>'}
+        </div>
+      ))}
+    </div>
+  );
 
   return (
-    <div className="min-h-screen py-20 px-4" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto">
+    <div className="relative min-h-screen py-10 px-4 bg-[#0a0a0a]" ref={sectionRef}>
+      <PatternElement />
+      
+      <div className="max-w-7xl mx-auto relative">
         <motion.div 
           className="text-center mb-16"
-          variants={headerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-4">
             Featured Projects
           </h2>
           <motion.div 
-            className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"
+            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full mb-4"
             initial={{ width: 0 }}
             animate={isInView ? { width: "6rem" } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           />
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            A showcase of my recent work and technical capabilities
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           {projects.map((project, index) => (
             <ProjectCard 
               key={index} 
@@ -150,7 +180,7 @@ const ProjectsSection = () => {
               isInView={isInView}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

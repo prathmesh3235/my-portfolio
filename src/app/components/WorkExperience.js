@@ -99,7 +99,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           transition={{ duration: 0.3, delay: index * 0.2 }}
         />
         
-        <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 ml-4">
+        <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 ml-4">
           <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
             <div>
               <h3 className="text-xl font-bold text-gray-800">{experience.title}</h3>

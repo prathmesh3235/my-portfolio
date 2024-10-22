@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import ProjectsSection from './ProjectsSection';
 import WorkExperience from './WorkExperience';
 import ProfileCard from './ProfileCard';
+import EducationSection from './EducationSection';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -31,21 +32,21 @@ const HeroSection = () => {
         }}
         transition={{ type: 'tween', ease: 'linear', duration: 0.2 }}
       />
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-4">
         <section id="about" className="section">
           <ProfileCard />
         </section>
-        <section id="work-experience" className="section mt-20">
+        <section id="work-experience" className="section">
           <WorkExperience/>
         </section>
-        <section id="technical-skills" className="section mt-20">
+        <section id="technical-expertise" className="section">
           <SkillsShowcase />
         </section>
-        <section id="projects" className="section mt-20">
+        <section id="projects" className="section">
           <ProjectsSection/>
         </section>
-        <section id="contact" className="section mt-20">
-          <ContactSection/>
+        <section id="education" className="section">
+        <EducationSection/>
         </section>
       </div>
       <Footer />
