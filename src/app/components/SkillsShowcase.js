@@ -24,7 +24,7 @@ const skillData = [
       {
         name: "JavaScript",
         level: 90,
-        logo: "/logos/typescript.svg",
+        logo: "/logos/javascript.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
