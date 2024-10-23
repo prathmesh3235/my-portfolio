@@ -23,7 +23,7 @@ const projects = [
     title: 'Yaml & Dockerfile Generator',
     description: 'A web-based application to generate YAML files and Dockerfiles, allowing developers to create these configuration files easily through an intuitive interface.',
     tech: ['React', 'Node.js', 'Docker'],
-    link: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
+    link: 'https://yaml-dockerfile-generator-application.vercel.app',
     github: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
     image: '/logos/dockerfileGenerator.png',
   }
