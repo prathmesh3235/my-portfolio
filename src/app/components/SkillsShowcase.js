@@ -265,7 +265,7 @@ const SkillsShowcase = () => {
   }, [controls, inView]);
 
   return (
-    <div className="min-h-screen py-1 px-4">
+    <div className="h-auto py-1 px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
         initial="hidden"
