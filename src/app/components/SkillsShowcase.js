@@ -38,6 +38,12 @@ const skillData = [
         level: 90,
         logo: "/logos/tailwindcss.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+      {
+        name: "Bootstrap",
+        level: 90,
+        logo: "/logos/tailwindcss.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
   },
@@ -50,7 +56,7 @@ const skillData = [
     skills: [
       {
         name: "Node.js",
-        level: 70,
+        level: 80,
         logo: "/logos/nodejs.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -76,15 +82,27 @@ const skillData = [
     borderColor: "border-purple-900/20",
     skills: [
       {
+        name: "Firebase",
+        level: 85,
+        logo: "/logos/firebase.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+      {
         name: "MySQL",
+        level: 75,
+        logo: "/logos/mongodb.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+      {
+        name: "Mongo DB",
         level: 70,
         logo: "/logos/mongodb.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
-        name: "Firebase",
-        level: 85,
-        logo: "/logos/firebase.svg",
+        name: "Google Cloud",
+        level: 60,
+        logo: "/logos/googlecloud.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
@@ -113,7 +131,14 @@ const skillData = [
         level: 50,
         logo: "/logos/kubernetes.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
-      }
+      },
+      {
+        name: "Openshift",
+        level: 30,
+        logo: "/logos/redhatopenshift.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+
     ]
   }
 ];
