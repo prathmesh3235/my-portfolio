@@ -1,23 +1,49 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Github, ExternalLink, Code2 } from 'lucide-react';
+import { Github, ExternalLink, Code2, Layout, Server } from 'lucide-react';
 
 const projects = [
   {
     title: 'Shristerling: E-commerce Website',
     description: 'Modern portfolio website with sleek animations, dynamic content loading, and responsive design. Features interactive UI elements and smooth navigation experience.',
-    tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'React'],
+    tech: ['Next.js', 'Tailwind CSS', 'React'],
     link: 'https://shristerling.vercel.app/',
     github: 'https://github.com/prathmesh3235/sterling_next',
     image: '/logos/projectSterling.webp',
+    type: 'Frontend'
   },
   {
     title: 'Azernis GmbH Website',
     description: 'Professional landing page with modern design principles and optimized performance metrics.',
-    tech: ['Next.js', 'Tailwind CSS', 'Docker'],
+    tech: ['React', 'Next.js', 'Tailwind CSS', 'Docker'],
     link: 'https://azernis.com',
     github: null,
     image: '/logos/projectAzernis.png',
+    type: 'Frontend'
+  },
+  {
+    title: 'Superhero Team Builder',
+    description: 'An interactive app to explore superheroes, build dream teams, and engage in epic battles. Offers recommendations for balanced or random teams based on powers and alignments.',
+    tech: ['React','Next.js','Node.js','Docker', 'Openshift'],
+    link: null,
+    github: 'https://github.com/prathmesh3235/superhero-team-builder',
+    image: '/logos/projectSuperheroes.png',
+  },
+  {
+    title: 'Request Management System',
+    description: 'A microservices-based system for handling employee requests and approvals, featuring Google SSO, role-based access control, email notifications, and real-time status updates.',
+    tech: [
+      'React', 
+      'Node.js', 
+      'MongoDB', 
+      'Google Cloud', 
+      'SSO', 
+      'Express'
+    ],
+    link: null,
+    github: 'https://github.com/prathmesh3235/microservicesApp',
+    image: '/logos/projectMicroservicesApp.png', 
+    type: 'Fullstack'
   },
   {
     title: 'Yaml & Dockerfile Generator',
@@ -26,6 +52,7 @@ const projects = [
     link: 'https://yaml-dockerfile-generator-application.vercel.app',
     github: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
     image: '/logos/dockerfileGenerator.png',
+    type: 'Fullstack'
   }
 ];
 
@@ -123,12 +150,10 @@ const ProjectCard = ({ project, index, isInView }) => {
     </motion.div>
   );
 };
-
 const ProjectsSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  // Background pattern elements
   const PatternElement = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.03]">
       {[...Array(15)].map((_, i) => (
