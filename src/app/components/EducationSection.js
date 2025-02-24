@@ -9,7 +9,7 @@ const educationData = {
         degree: "Master's in Computer Science",
         institution: "Universität Paderborn",
         location: "Paderborn, Germany",
-        period: "10/2022 - Present",
+        period: "10/2022 - 02/2025",
         details: [
           "Specialization in Software Engineering and Web Technologies",
           "Master Thesis: Analyzing the AI and digital potential of late factory planning",
@@ -27,18 +27,18 @@ const educationData = {
           "Improved overall project efficiency and effectiveness by closely collaborating with the backend team, successfully enabling dynamic content delivery through seamless API integration"
         ]
       },
-    //   {
-    //     degree: "Master Thesis",
-    //     institution: "Fraunhofer IEM",
-    //     location: "Paderborn, Germany",
-    //     period: "05/2024 – 10/2024",
-    //     details: [
-    //       "Analyzing the AI and digital potential of late factory planning",
-    //       "Enhanced late factory planning efficiency by developing the Digital Integrative Factory Planning methodology with AI and digital technology integration",
-    //       "Improved digital factory planning by identifying inefficiencies and designing advanced tools, including an Interface Matrix and AI Potential Catalogue",
-    //       "Delivered a dynamic web-based application with React, Next.js, Node.js, Express, and MySQL for real-time interaction and visualization of factory planning, boosting decision-making and efficiency"
-    //     ]
-    //   },
+      // {
+      //   degree: "Master Thesis",
+      //   institution: "Fraunhofer IEM",
+      //   location: "Paderborn, Germany",
+      //   period: "05/2024 – 01/2025",
+      //   details: [
+      //     "Analyzing the AI and digital potential of late factory planning",
+      //     "Enhanced late factory planning efficiency by developing the Digital Integrative Factory Planning methodology with AI and digital technology integration",
+      //     "Improved digital factory planning by identifying inefficiencies and designing advanced tools, including an Interface Matrix and AI Potential Catalogue",
+      //     "Delivered a dynamic web-based application with React, Next.js, Node.js, Express, and MySQL for real-time interaction and visualization of factory planning, boosting decision-making and efficiency"
+      //   ]
+      // },
       {
         degree: "Bachelor of Engineering",
         institution: "Visvesvaraya Technological University",
