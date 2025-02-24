@@ -11,7 +11,7 @@ const skillData = [
     skills: [
       {
         name: "React",
-        level: 90,
+        level: 95,
         logo: "/logos/react.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -23,7 +23,7 @@ const skillData = [
       },
       {
         name: "JavaScript",
-        level: 90,
+        level: 95,
         logo: "/logos/javascript.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -35,7 +35,7 @@ const skillData = [
       },
       {
         name: "Tailwind CSS",
-        level: 90,
+        level: 95,
         logo: "/logos/tailwindcss.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
@@ -56,20 +56,26 @@ const skillData = [
     skills: [
       {
         name: "Node.js",
-        level: 80,
+        level: 90,
         logo: "/logos/nodejs.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Express",
-        level: 70,
+        level: 90,
         logo: "/logos/express.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Python",
-        level: 70,
+        level: 85,
         logo: "/logos/python.svg",
+        color: "bg-gradient-to-r from-purple-500 to-blue-500"
+      },
+      {
+        name: "FastAPI",
+        level: 85,
+        logo: "/logos/fastapi.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
     ]
@@ -89,19 +95,19 @@ const skillData = [
       },
       {
         name: "MySQL",
-        level: 75,
+        level: 85,
         logo: "/logos/mongodb.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Mongo DB",
-        level: 70,
+        level: 90,
         logo: "/logos/mongodb.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Google Cloud",
-        level: 60,
+        level: 70,
         logo: "/logos/googlecloud.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       }
@@ -116,25 +122,25 @@ const skillData = [
     skills: [
       {
         name: "Docker",
-        level: 80,
+        level: 85,
         logo: "/logos/docker.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Git",
-        level: 90,
+        level: 95,
         logo: "/logos/git.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Kubernetes",
-        level: 50,
+        level: 60,
         logo: "/logos/kubernetes.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },
       {
         name: "Openshift",
-        level: 30,
+        level: 40,
         logo: "/logos/redhatopenshift.svg",
         color: "bg-gradient-to-r from-purple-500 to-blue-500"
       },

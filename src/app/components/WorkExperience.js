@@ -4,6 +4,18 @@ import { Briefcase, Calendar, MapPin, ArrowRight } from 'lucide-react';
 
 const workExperience = [
   {
+    title: "Full Stack Developer",
+    company: "Deutsches Forschungszentrum für Künstliche Intelligenz (DFKI)",
+    location: "Germany",
+    period: "02/2025 – Present",
+    type: "Part Time",
+    highlights: [
+      "Enhanced AI-driven image processing workflows by implementing a backend system for pre-computing and storing image embeddings in a vector database, improving retrieval efficiency by 30%.",
+      "Developed and deployed scalable web applications using React.js, Python (FastAPI), and containerized solutions, streamlining research collaboration and real-time data visualization.",
+      "Automated deployment pipelines using Docker and GitHub Actions, ensuring continuous integration and deployment (CI/CD) for scalable and maintainable web applications, reducing manual deployment efforts by 40%."
+    ]
+  },
+  {
     title: "Frontend Web Developer",
     company: "Johannes Gutenberg-Universität Mainz",
     location: "Mainz, Germany",
