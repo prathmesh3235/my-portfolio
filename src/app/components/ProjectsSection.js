@@ -4,15 +4,6 @@ import { Github, ExternalLink, Code2, Layout, Server } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Shristerling: E-commerce Website',
-    description: 'Modern portfolio website with sleek animations, dynamic content loading, and responsive design. Features interactive UI elements and smooth navigation experience.',
-    tech: ['Next.js', 'Tailwind CSS', 'React'],
-    link: 'https://shristerling.vercel.app/',
-    github: 'https://github.com/prathmesh3235/sterling_next',
-    image: '/logos/projectSterling.webp',
-    type: 'Frontend'
-  },
-  {
     title: 'Azernis GmbH Website',
     description: 'Professional landing page with modern design principles and optimized performance metrics.',
     tech: ['React', 'Next.js', 'Tailwind CSS', 'Docker'],
@@ -53,6 +44,15 @@ const projects = [
     github: 'https://github.com/prathmesh3235/Yaml_and_Dockerfile_Generator_Application',
     image: '/logos/dockerfileGenerator.png',
     type: 'Fullstack'
+  },
+  {
+    title: 'Shristerling: E-commerce Website',
+    description: 'Modern portfolio website with sleek animations, dynamic content loading, and responsive design. Features interactive UI elements and smooth navigation experience.',
+    tech: ['Next.js', 'Tailwind CSS', 'React'],
+    link: 'https://shristerling.vercel.app/',
+    github: 'https://github.com/prathmesh3235/sterling_next',
+    image: '/logos/projectSterling.webp',
+    type: 'Frontend'
   }
 ];
 
