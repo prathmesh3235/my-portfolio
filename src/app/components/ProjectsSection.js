@@ -170,7 +170,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <div className="relative h-auto py-10 px-4 bg-[#0a0a0a]" ref={sectionRef}>
+    <div className="relative h-auto py-10 m-6 px-4 bg-[#0a0a0a]" ref={sectionRef}>
       <PatternElement />
       
       <div className="max-w-7xl mx-auto relative">
