@@ -9,7 +9,7 @@ import ProjectsSection from './ProjectsSection';
 import WorkExperience from './WorkExperience';
 import ProfileCard from './ProfileCard';
 import EducationSection from './EducationSection';
-import LinkedInRecommendations from './LinkedInRecommendations';
+import Recommendations from './LinkedInRecommendations';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -49,8 +49,8 @@ const HeroSection = () => {
         <section id="education" className="section">
         <EducationSection/>
         </section>
-        <section id="LinkedInRecommendations" className="section">
-        <LinkedInRecommendations/>
+        <section id="Recommendations" className="section">
+        <Recommendations/>
         </section>
       </div>
       <Footer />

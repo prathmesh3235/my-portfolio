@@ -77,9 +77,9 @@ const RecommendationCard = ({ recommendation }) => {
   );
 };
 
-const LinkedInRecommendations = () => {
+const Recommendations = () => {
   return (
-    <div className="py-16 px-4 bg-[#0a0a0a]" id="linkedinrecommendations">
+    <div className="py-16 px-4 bg-[#0a0a0a]" id="recommendations">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -126,4 +126,4 @@ const LinkedInRecommendations = () => {
   );
 };
 
-export default LinkedInRecommendations;
+export default Recommendations;

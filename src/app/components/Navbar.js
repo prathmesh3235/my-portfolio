@@ -28,7 +28,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['About', 'Work Experience', 'Technical Expertise', 'Projects', 'Education', 'LinkedInRecommendations'];
+  const navItems = ['About', 'Work Experience', 'Technical Expertise', 'Projects', 'Education', 'Recommendations'];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1 ml-auto pr-1">
               {navItems.map((item) => {
                 const itemId = item.toLowerCase().replace(/\s+/g, '-');
                 const isActive = activeSection === itemId;
