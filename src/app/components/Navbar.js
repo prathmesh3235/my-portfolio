@@ -28,7 +28,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['About', 'Work Experience', 'Technical Expertise', 'Projects', 'Education'];
+  const navItems = ['About', 'Work Experience', 'Technical Expertise', 'Projects', 'Education', 'LinkedInRecommendations'];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
