@@ -34,13 +34,10 @@ const RecommendationCard = ({ recommendation }) => {
           <div className="relative">
             <div className="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
               <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
-                <Image 
+                <img 
                   src={recommendation.image}
                   alt={recommendation.name}
-                  width={56}
-                  height={56}
                   className="w-full h-full object-cover"
-                  unoptimized 
                 />
               </div>
             </div>
