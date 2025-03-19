@@ -6,7 +6,7 @@ const recommendationsData = [
   {
     name: "Kim Uhlendorf",
     position: "PhD Candidate in Consumer Behavior @ GSU / UoC",
-    image: "/Kim.jpeg",
+    image: "/kim.jpeg",
     date: "October 15, 2024",
     text: "Prathmesh Doddanawar has been employed as a student assistant at the Institute for Sports Economics and Sports Management (Chair of Sports Business Administration) at the German Sport University Cologne since April 2023. As part of his duties, Mr. Doddanawar is responsible for supporting the institute's research as a computer scientist. His tasks encompass the development of an e-commerce website as part of a research project, including the setup of a database to track user activities. He also supported with the setup of different 3D models and their integration into the website. In fulfilling his tasks, Prathmesh has always shown the highest motivation and distinguished himself by an extraordinarily independent and flexible way of working. Prathmesh is well-versed in the use of several modern computer science languages and their application. Prathmesh has always shown impeccable behavior towards his colleagues and superiors. Future employers will find in him a particularly dedicated and independently working employee.",
     relationship: "managed Prathmesh directly"
