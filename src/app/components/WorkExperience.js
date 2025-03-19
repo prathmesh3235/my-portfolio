@@ -28,7 +28,7 @@ const workExperience = [
     ]
   },
   {
-    title: "Scientific Assistant (Web Development)",
+    title: "Scientific Assistant (Full Stack Web Development)",
     company: "Deutsche Sporthochschule",
     location: "Köln, Germany",
     period: "05/2023 – 04/2024",
