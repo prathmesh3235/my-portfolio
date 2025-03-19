@@ -70,7 +70,7 @@ const educationData = {
     ],
     languages: [
       { name: "English", level: "C1", proficiency: 90 },
-      { name: "German", level: "A2", proficiency: 40 },
+      { name: "German", level: "B1", proficiency: 40 },
       { name: "Hindi", level: "C1", proficiency: 90 },
       { name: "Kannada", level: "C1", proficiency: 90 },
       { name: "Marathi", level: "C1", proficiency: 90 },
