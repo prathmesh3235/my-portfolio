@@ -35,18 +35,12 @@ const RecommendationCard = ({ recommendation }) => {
             <div className="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
               <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
                 <Image 
-                  src={recommendation.image || "https://via.placeholder.com/100?text=Profile"}
+                  src={recommendation.image}
                   alt={recommendation.name}
                   width={56}
                   height={56}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    // Handle image error by setting a fallback directly in the onError
-                    const target = e.target;
-                    if (target.src !== "https://via.placeholder.com/100?text=Profile") {
-                      target.src = "https://via.placeholder.com/100?text=Profile";
-                    }
-                  }}
+                  unoptimized 
                 />
               </div>
             </div>
